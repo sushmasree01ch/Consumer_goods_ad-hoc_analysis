@@ -14,5 +14,6 @@ JOIN fact_pre_invoice_deductions
 	USING (customer_code)
 WHERE market="india" AND fiscal_year="2021"
 GROUP BY customer_code,customer
-ORDER BY avg_dct_pct DESC
+ORDER BY avg_discount_pct DESC
+
 LIMIT 5;
